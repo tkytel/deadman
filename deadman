@@ -54,7 +54,7 @@ def get_title_hostinfo(with_wheel = False):
 ARROW = " > "
 REAR  = "   "
 PING_INTERVAL = 0.05
-PING_ALLTARGET_INTERVAL = 1
+PING_ALLTARGET_INTERVAL = 10
 MAX_HOSTNAME_LENGTH = 20
 MAX_ADDRESS_LENGTH = 40
 RESULT_STR_LENGTH = 10
@@ -198,7 +198,7 @@ SEPARATOR = Separator()
 
 class Ping:
 
-    def __init__(self, addr, osname, timeout = 1.0,
+    def __init__(self, addr, osname, timeout = 3.0,
                  relay = None, source = None, tcp = None):
 
         self.addr = addr
